@@ -11,6 +11,10 @@ Route::get('/category/show', function () {
     return view('frontend.category.show');
 })->name('category.show');
 
+Route::get('/product/show', function () {
+    return view('frontend.product.show');
+})->name('product.show');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

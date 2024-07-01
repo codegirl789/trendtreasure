@@ -1,7 +1,7 @@
 <x-main-layout>
-    <x-frontend.category-breadcrumb>
+    <x-frontend.breadcrumb-category>
         Sweatshirt
-    </x-frontend.category-breadcrumb>
+    </x-frontend.breadcrumb-category>
 
     <x-frontend.simple-flex>
         <h2 class="text-3xl font-semibold">Sweatshirt</h2>
