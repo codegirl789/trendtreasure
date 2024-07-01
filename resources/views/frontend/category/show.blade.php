@@ -14,19 +14,19 @@
     <div class="py-2 flex space-x-4">
         <div class="relative w-32 py-2 px-4 rounded-3xl shadow bg-violet-50 text-gray-600">
             <a href="#">hjhkj</a>
-            <i class="fa-solid fa-xmark absolute top-3 right-3"></i>
+            <i class="fa-solid fa-xmark absolute top-3 right-3 cursor-pointer"></i>
         </div>
         <div class="relative w-32 py-2 px-4 rounded-3xl shadow bg-violet-50 text-gray-600">
             <a href="#">hjhkj</a>
-            <i class="fa-solid fa-xmark absolute top-3 right-3"></i>
+            <i class="fa-solid fa-xmark absolute top-3 right-3 cursor-pointer"></i>
         </div>
         <div class="relative w-32 py-2 px-4 rounded-3xl shadow bg-violet-50 text-gray-600">
             <a href="#">hjhkj</a>
-            <i class="fa-solid fa-xmark absolute top-3 right-3"></i>
+            <i class="fa-solid fa-xmark absolute top-3 right-3 cursor-pointer"></i>
         </div>
         <div class="relative w-32 py-2 px-4 rounded-3xl shadow bg-violet-50 text-gray-600">
             <a href="#">hjhkj</a>
-            <i class="fa-solid fa-xmark absolute top-3 right-3"></i>
+            <i class="fa-solid fa-xmark absolute top-3 right-3 cursor-pointer"></i>
         </div>
     </div>
 

@@ -1,11 +1,11 @@
-<div class="px-4 py-2">
+<div class="px-4 py-2 shadow">
     <h3 class="text-xl font-semibold">Category</h3>
     <ul class="list-outside pl-4 py-2 space-y-2 text-gray-600">
         <li>
             <a href="{{ route('category.show') }}">T-shirt</a>
         </li>
         <li>
-            <a href="{{ route('category.show') }}">Sweatshirt</a>
+            <a href="{{ route('category.show') }}" class="text-violet-600 font-semibold">Sweatshirt</a>
         </li>
         <li>
             <a href="{{ route('category.show') }}">Dress</a>

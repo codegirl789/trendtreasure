@@ -11,8 +11,8 @@
 
 <body>
     <div class="flex flex-col lg:flex-row justify-between items-start">
-        <div class="basis-1/5 border-r border-gray-200">
-            <div class="py-2 px-4 text-xl h-16 leading-10 border-b-2 border-gray-100">
+        <div class="basis-1/5 border-r border-gray-200 shadow">
+            <div class="py-2 px-4 text-xl h-16 leading-10 shadow">
                 <i class="fa-solid fa-bag-shopping text-violet-500"></i> Trend<span class="font-semibold">Treasure</span>
             </div>
             <div class="p-4 lg:hidden">
