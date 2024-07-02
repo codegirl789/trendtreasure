@@ -45,7 +45,7 @@
                     cart</button>
                 <div class="basis-12">
                     <i
-                        class="fa-regular fa-lg text-violet-700 bg-gray-100 w-10 h-10 rounded-full text-center shadow leading-10 fa-heart"></i>
+                        class="fa-regular fa-lg text-violet-700 bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full text-center shadow leading-10 fa-heart"></i>
                 </div>
             </div>
 
