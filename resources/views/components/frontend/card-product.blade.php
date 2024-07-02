@@ -3,7 +3,7 @@
         <div class="image">
             <a href="{{ route('product.show') }}">
                 <img src="{{ asset('images/recipe_image.png') }}" alt="image"
-                    class="rounded-t-lg bg-gray-200  w-full h-56 object-cover">
+                    class="rounded-t-lg   w-full h-56 object-cover">
             </a>
         </div>
         <a href="{{ route('category.show') }}"
