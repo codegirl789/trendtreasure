@@ -16,11 +16,11 @@
                 <i class="fa-solid fa-bag-shopping text-violet-500"></i> Trend<span class="font-semibold">Treasure</span>
                 | <span class="font-bold">Admin</span>
             </div>
-            @include('admin.sidebar')
+            @include('admin.__partials.sidebar')
         </div>
         <div class="md:basis-4/5 w-full">
-            @include('admin.navbar')
-            <div>
+            @include('admin.__partials.navbar')
+            <div class="py-4">
                 {{ $slot }}
             </div>
         </div>

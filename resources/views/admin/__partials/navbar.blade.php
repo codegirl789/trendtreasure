@@ -13,11 +13,14 @@
             <span class="text-base pr-2"> Wishlist </span>
             <i class="fa-lg fa-regular fa-heart"></i>
         </a>
-        <div class="relative" x-data="{ commentOpen: false }">
-            <img @click="commentOpen = !commentOpen" src="{{ asset('images/special.jpg') }}" alt="avatar"
+        <div class="relative z-50 flex justify-between items-center pl-8 space-x-2" x-data="{ adminDropdownOpen: false }">
+            @auth
+                <span class="text-gray-700 text-base">Welcome, <strong>{{ Auth::user()->username }}</strong> </span>
+            @endauth
+            <img @click="adminDropdownOpen = !adminDropdownOpen" src="{{ asset(Auth::user()->image) }}" alt="avatar"
                 class="w-10 h-10 rounded-full object-cover cursor-pointer">
-            <div x-cloaked x-show="commentOpen" x-transition.oen.top.left.duration.500ms @click.away="commentOpen=false"
-                @keydown.escape.window="commentOpen=false"
+            <div x-cloaked x-show="adminDropdownOpen" x-transition.oen.top.left.duration.500ms
+                @click.away="adminDropdownOpen=false" @keydown.escape.window="adminDropdownOpen=false"
                 class="absolute w-60 h-max p-3 top-12 right-2 bg-violet-50 rounded-lg shadow">
                 <ul class="list-outside w-full py-2 space-y-4 text-gray-600">
                     <li
