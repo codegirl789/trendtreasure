@@ -2,22 +2,22 @@
     <h3 class="text-xl font-semibold">Category</h3>
     <ul class="list-outside pl-4 py-2 space-y-2 text-gray-600">
         <li>
-            <a href="{{ route('category.show') }}">T-shirt</a>
+            <a href="{{ route('category.show', 2) }}">T-shirt</a>
         </li>
         <li>
-            <a href="{{ route('category.show') }}" class="text-violet-600 font-semibold">Sweatshirt</a>
+            <a href="{{ route('category.show', 2) }}" class="text-violet-600 font-semibold">Sweatshirt</a>
         </li>
         <li>
-            <a href="{{ route('category.show') }}">Dress</a>
+            <a href="{{ route('category.show', 2) }}">Dress</a>
         </li>
         <li>
-            <a href="{{ route('category.show') }}">Pants & Skirt</a>
+            <a href="{{ route('category.show', 2) }}">Pants & Skirt</a>
         </li>
         <li>
-            <a href="{{ route('category.show') }}">Shoes</a>
+            <a href="{{ route('category.show', 2) }}">Shoes</a>
         </li>
         <li>
-            <a href="{{ route('category.show') }}">Accessories</a>
+            <a href="{{ route('category.show', 2) }}">Accessories</a>
         </li>
     </ul>
 
