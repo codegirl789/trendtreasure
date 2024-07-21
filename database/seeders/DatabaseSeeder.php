@@ -2,6 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Address;
+use App\Models\Category;
+use App\Models\Product;
+use App\Models\SubCategory;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -33,5 +37,12 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('password'),
             'image' => fake()->randomElement(['users/mouse.jpg', 'users/tiger.jpg', 'users/dog.jpg', 'users/turtle.jpg', 'users/parrot.jpg']),
         ]);
+
+        User::factory(20)->create();
+
+        Address::factory(20)->create();
+        Category::factory(20)->create();
+        SubCategory::factory(20)->create();
+        Product::factory(20)->create();
     }
 }

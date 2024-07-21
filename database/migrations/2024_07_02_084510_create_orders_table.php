@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('user_id')->constrained();
             $table->string('total_price');
             $table->timestamp('order_approved_at', 0)->nullable();
             $table->timestamp('order_received_carrier_date', 0)->nullable();

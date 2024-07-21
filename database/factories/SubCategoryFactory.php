@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,8 +17,11 @@ class SubCategoryFactory extends Factory
      */
     public function definition(): array
     {
+        $category = Category::all()->random();
         return [
-            //
+            'category_id' => $category->id,
+            'name' => fake()->words(3, true),
+            'description' => fake()->paragraph(),
         ];
     }
 }
