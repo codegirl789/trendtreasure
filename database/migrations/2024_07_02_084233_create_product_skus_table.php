@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('size');
             $table->string('color');
             $table->string('price');
-            $table->string('discount');
             $table->string('quantity');
             $table->timestamps();
         });

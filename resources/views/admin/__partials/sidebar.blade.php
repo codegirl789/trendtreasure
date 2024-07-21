@@ -7,23 +7,23 @@
         </li>
         <li
             class="hover:bg-violet-100 hover:text-gray-800 hover:font-semibold hover:py-2 px-4 hover:rounded-3xl hover:shadow transition-all cursor-pointer">
-            <a href="{{ route('category.show', 2) }}">All Products</a>
+            <a href="{{ route('admin.product.create') }}">All Products</a>
         </li>
         <li
             class="hover:bg-violet-100 hover:text-gray-800 hover:font-semibold hover:py-2 px-4 hover:rounded-3xl hover:shadow transition-all cursor-pointer">
-            <a href="{{ route('category.show', 2) }}">Add New Product</a>
+            <a href="{{ route('admin.product.create') }}">Add New Product</a>
         </li>
         <li
             class="hover:bg-violet-100 hover:text-gray-800 hover:font-semibold hover:py-2 px-4 hover:rounded-3xl hover:shadow transition-all cursor-pointer">
-            <a href="{{ route('category.show', 2) }}">All Categories</a>
+            <a href="{{ route('admin.product.create') }}">All Categories</a>
         </li>
         <li
             class="hover:bg-violet-100 hover:text-gray-800 hover:font-semibold hover:py-2 px-4 hover:rounded-3xl hover:shadow transition-all cursor-pointer">
-            <a href="{{ route('category.show', 2) }}">Add New Category</a>
+            <a href="{{ route('admin.product.create') }}">Add New Category</a>
         </li>
         <li
             class="hover:bg-violet-100 hover:text-gray-800 hover:font-semibold hover:py-2 px-4 hover:rounded-3xl hover:shadow transition-all cursor-pointer">
-            <a href="{{ route('category.show', 2) }}">All Users</a>
+            <a href="{{ route('admin.product.create') }}">All Users</a>
         </li>
     </ul>
 </div>

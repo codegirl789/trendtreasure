@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\admin\AdminCategoriesController;
+use App\Http\Controllers\admin\AdminProductsController;
 use App\Http\Controllers\frontend\CategoryController;
 use App\Http\Controllers\frontend\HomepageController;
 use App\Http\Controllers\frontend\ProductController;
@@ -22,6 +24,8 @@ Route::middleware('auth', IsAdmin::class, preventBackHistory::class)->prefix('ad
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::resource('products', AdminProductsController::class)->names('admin.product');
+    Route::resource('categories', AdminCategoriesController::class)->names('admin.category');
 });
 
 require __DIR__ . '/auth.php';

@@ -4,14 +4,14 @@
             placeholder="Search Products">
         <i class="fas fa-search absolute right-3 top-3 text-violet-600"></i>
     </div>
-    <div class="flex justify-between items-center space-x-4">
+    <div class="flex justify-between items-center space-x-4 pr-4">
         <a href="#" class="px-4 py-2 text-violet-600 bg-violet-50 rounded-3xl shadow text-center">
             <span class="text-base pr-2">Your Cart</span>
             <i class="fa-lg fa-solid fa-cart-shopping"></i>
         </a>
         <a href="#" class="px-4 py-2 text-violet-600 bg-violet-50 rounded-3xl shadow text-center">
             <span class="text-base pr-2"> Wishlist </span>
-            <i class="fa-lg fa-regular fa-heart"></i>
+            <i class="fa-lg fa-regular fa-heart cursor-pointer"></i>
         </a>
         <div class="relative z-50 flex justify-between items-center pl-8 space-x-2" x-data="{ DropdownOpen: false }">
             @auth
@@ -20,6 +20,9 @@
             <img @click="DropdownOpen = !DropdownOpen"
                 src=" {{ Auth::user() ? asset(Auth::user()->image) : asset('users/dog.jpg') }}" alt="avatar"
                 class="w-10 h-10 rounded-full object-cover cursor-pointer">
+            @guest
+                <i class="fa-solid fa-caret-down cursor-pointer" @click="DropdownOpen = !DropdownOpen"></i>
+            @endguest
             <div x-cloaked x-show="DropdownOpen" x-transition.oen.top.left.duration.500ms
                 @click.away="DropdownOpen=false" @keydown.escape.window="DropdownOpen=false"
                 class="absolute w-60 h-max p-3 top-12 right-2 bg-violet-50 rounded-lg shadow">

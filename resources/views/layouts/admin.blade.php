@@ -20,7 +20,7 @@
         </div>
         <div class="md:basis-4/5 w-full">
             @include('admin.__partials.navbar')
-            <div class="py-4">
+            <div class="p-4">
                 {{ $slot }}
             </div>
         </div>

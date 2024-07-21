@@ -15,7 +15,9 @@
         </a>
         <div class="relative z-50 flex justify-between items-center pl-8 space-x-2" x-data="{ adminDropdownOpen: false }">
             @auth
-                <span class="text-gray-700 text-base">Welcome, <strong>{{ Auth::user()->username }}</strong> </span>
+                <span @click="adminDropdownOpen = !adminDropdownOpen"
+                    class="text-gray-700 text-base cursor-pointer">Welcome,
+                    <strong>{{ Auth::user()->username }}</strong> <i class="fa-solid fa-caret-down"></i></span>
             @endauth
             <img @click="adminDropdownOpen = !adminDropdownOpen" src="{{ asset(Auth::user()->image) }}" alt="avatar"
                 class="w-10 h-10 rounded-full object-cover cursor-pointer">
