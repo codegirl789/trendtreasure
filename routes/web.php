@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\admin\AdminCategoriesController;
 use App\Http\Controllers\admin\AdminProductsController;
+use App\Http\Controllers\frontend\CartController;
 use App\Http\Controllers\frontend\CategoryController;
+use App\Http\Controllers\frontend\CheckoutController;
 use App\Http\Controllers\frontend\HomepageController;
 use App\Http\Controllers\frontend\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -15,6 +17,14 @@ Route::get('/', [HomepageController::class, 'index'])->name('homepage');
 Route::get('/category/{id}', [CategoryController::class, 'show'])->name('category.show');
 
 Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
+
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::delete('/cart/{id}', [CartController::class, 'destroy'])->name('cart.destroy');
+
+Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
+Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
+
+
 
 Route::middleware('auth', IsAdmin::class, preventBackHistory::class)->prefix('admin')->group(function () {
     Route::get('/dashboard', function () {

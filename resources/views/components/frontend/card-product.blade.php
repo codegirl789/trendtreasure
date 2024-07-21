@@ -23,5 +23,4 @@
             <i class="fa-solid fa-cart-shopping"></i>
         </span>
     </div>
-
 </div>

@@ -24,7 +24,7 @@ class ProductFactory extends Factory
         return [
             'category_id' => $category->id,
             'sub_category_id' => $sub_category->id,
-            'name' => fake()->words(4, true),
+            'name' => fake()->words(3, true),
             'slug' => fake()->slug(4, true),
             'description' => fake()->paragraph(10),
             'image' => fake()->imageUrl(),

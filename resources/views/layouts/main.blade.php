@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trend Treasure</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
+    @vite('resources/css/app.css')
 </head>
 
 <body>
@@ -28,7 +28,11 @@
             </div>
         </div>
     </div>
+
+    {{-- @vite('resources/js/app.js') --}}
     @livewireScripts
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </body>
 
 </html>

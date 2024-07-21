@@ -11,7 +11,9 @@ class YourCartNavbar extends Component
 
     public function mount()
     {
-        $this->cartCount = Auth::user()->Carts->count();
+        if (Auth::user()) {
+            $this->cartCount = Auth::user()->Carts->count();
+        }
     }
 
     protected $listeners = ['cartUpdated'];

@@ -11,12 +11,13 @@
         </div>
 
         @auth
-            <button wire:click="Addtocart" class="w-full py-2 rounded-3xl shadow  bg-gray-100 hover:bg-gray-200 ">
+            <button wire:click="Addtocart"
+                class="w-full py-2 rounded-3xl shadow  bg-violet-600 hover:bg-violet-700 text-white ">
                 Add to cart
             </button>
         @else
             <a href="{{ route('login') }}" class="w-full ">
-                <button class="w-full py-2 rounded-3xl shadow  bg-gray-100 hover:bg-gray-200 ">
+                <button class="w-full py-2 rounded-3xl shadow  bg-violet-600 hover:bg-violet-700 text-white ">
                     Login to Add to cart
                 </button>
             </a>
@@ -28,16 +29,18 @@
         </div>
     </div>
 
-    @auth
-        <button class="w-full py-2 rounded-3xl shadow  bg-violet-600 hover:bg-violet-700 text-white">
-            Buy Now
-        </button>
+    {{-- @auth
+        <a href="{{ route('checkout.index') }}">
+            <button class="w-full py-2 rounded-3xl shadow  bg-violet-600 hover:bg-violet-700 text-white">
+                Buy Now
+            </button>
+        </a>
     @else
         <a href="{{ route('login') }}">
             <button class="w-full py-2 rounded-3xl shadow  bg-violet-600 hover:bg-violet-700 text-white">
                 Login to Buy Now
             </button>
         </a>
-    @endauth
+    @endauth --}}
 
 </div>

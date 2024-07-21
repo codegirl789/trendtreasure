@@ -28,7 +28,7 @@ class ProductActions extends Component
 
     public function Addtocart()
     {
-        $total = $this->product->price * $this->number;
+        $total = ($this->product->price * $this->number) - ($this->product->discount * $this->number);
 
         $cart = new Cart();
         $cart->user_id = Auth::user()->id;
@@ -37,7 +37,7 @@ class ProductActions extends Component
         $cart->quantity = $this->number;
         $cart->save();
 
-        $this->dispatch('cartUpdated');
+        $this->dispatch('cartUpdated', $this->number);
     }
 
     public function render()
