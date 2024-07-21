@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trend Treasure</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
 </head>
 
 <body>
@@ -27,7 +28,7 @@
             </div>
         </div>
     </div>
-
+    @livewireScripts
 </body>
 
 </html>

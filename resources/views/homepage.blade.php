@@ -10,24 +10,12 @@
             Popular
         </x-frontend.card-highlight>
 
-        <x-frontend.card-product>
-            Sweatshirt For Women
-        </x-frontend.card-product>
-        <x-frontend.card-product>
-            Sweatshirt For Women
-        </x-frontend.card-product>
-        <x-frontend.card-product>
-            Sweatshirt For Women
-        </x-frontend.card-product>
-        <x-frontend.card-product>
-            Sweatshirt For Women
-        </x-frontend.card-product>
-        <x-frontend.card-product>
-            Sweatshirt For Women
-        </x-frontend.card-product>
-        <x-frontend.card-product>
-            Sweatshirt For Women
-        </x-frontend.card-product>
+        @foreach ($products as $product)
+            <x-frontend.card-product :product="$product">
+                {{ $product->name }}
+            </x-frontend.card-product>
+        @endforeach
+
 
     </div>
 </x-main-layout>
