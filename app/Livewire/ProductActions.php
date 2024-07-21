@@ -2,11 +2,15 @@
 
 namespace App\Livewire;
 
+use App\Models\Cart;
+use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class ProductActions extends Component
 {
     public $number = 1;
+    public Product $product;
 
     public function increment()
     {
@@ -20,6 +24,20 @@ class ProductActions extends Component
         } else {
             $this->number = 1;
         }
+    }
+
+    public function Addtocart()
+    {
+        $total = $this->product->price * $this->number;
+
+        $cart = new Cart();
+        $cart->user_id = Auth::user()->id;
+        $cart->product_id = $this->product->id;
+        $cart->total = $total;
+        $cart->quantity = $this->number;
+        $cart->save();
+
+        $this->dispatch('cartUpdated');
     }
 
     public function render()

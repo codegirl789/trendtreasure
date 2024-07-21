@@ -9,15 +9,35 @@
                 <i class="fa-solid fa-plus cursor-pointer"></i>
             </span>
         </div>
-        <button class="w-full py-2 rounded-3xl shadow  bg-gray-100 hover:bg-gray-200 ">
-            Add to cart
-        </button>
+
+        @auth
+            <button wire:click="Addtocart" class="w-full py-2 rounded-3xl shadow  bg-gray-100 hover:bg-gray-200 ">
+                Add to cart
+            </button>
+        @else
+            <a href="{{ route('login') }}" class="w-full ">
+                <button class="w-full py-2 rounded-3xl shadow  bg-gray-100 hover:bg-gray-200 ">
+                    Login to Add to cart
+                </button>
+            </a>
+        @endauth
+
         <div class="basis-12">
             <i
                 class="fa-regular fa-lg text-violet-700 bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full text-center shadow leading-10 fa-heart"></i>
         </div>
     </div>
-    <button class="w-full py-2 rounded-3xl shadow  bg-violet-600 hover:bg-violet-700 text-white">
-        Buy Now
-    </button>
+
+    @auth
+        <button class="w-full py-2 rounded-3xl shadow  bg-violet-600 hover:bg-violet-700 text-white">
+            Buy Now
+        </button>
+    @else
+        <a href="{{ route('login') }}">
+            <button class="w-full py-2 rounded-3xl shadow  bg-violet-600 hover:bg-violet-700 text-white">
+                Login to Buy Now
+            </button>
+        </a>
+    @endauth
+
 </div>

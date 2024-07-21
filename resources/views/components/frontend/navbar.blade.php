@@ -5,13 +5,18 @@
         <i class="fas fa-search absolute right-3 top-3 text-violet-600"></i>
     </div>
     <div class="flex justify-between items-center space-x-4 pr-4">
+        <livewire:your-cart-navbar />
         <a href="#" class="px-4 py-2 text-violet-600 bg-violet-50 rounded-3xl shadow text-center">
-            <span class="text-base pr-2">Your Cart</span>
-            <i class="fa-lg fa-solid fa-cart-shopping"></i>
-        </a>
-        <a href="#" class="px-4 py-2 text-violet-600 bg-violet-50 rounded-3xl shadow text-center">
-            <span class="text-base pr-2"> Wishlist </span>
-            <i class="fa-lg fa-regular fa-heart cursor-pointer"></i>
+            <div class="text-base">Wishlist
+                @auth
+                    {{-- <span class="px-3 font-semibold py-1 text-center bg-white rounded-full shadow">
+                        {{ Auth::user()->Carts->count() }}
+                    </span> --}}
+                @endauth
+                <i class="fa-lg fa-regular fa-heart pl-2"></i>
+            </div>
+            {{-- <span class="text-base pr-2"> Wishlist </span> --}}
+            {{-- <i class="fa-lg fa-regular fa-heart cursor-pointer"></i> --}}
         </a>
         <div class="relative z-50 flex justify-between items-center pl-8 space-x-2" x-data="{ DropdownOpen: false }">
             @auth
