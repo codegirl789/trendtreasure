@@ -1,6 +1,7 @@
 <div class="relative">
     <form wire:submit.prevent="searchForm">
-        <input type="text" wire:model="search" class="outline-none border-none bg-violet-50 shadow rounded-3xl w-72"
+        <input type="text" wire:model="search"
+            class="outline-none border-none bg-violet-50 shadow rounded-3xl w-72 focus:ring-1 focus:ring-violet-300"
             placeholder="Search Products">
         <i class="fas fa-search absolute right-3 top-3 text-violet-600"></i>
         {{-- <input type="text" placeholder="Search" 

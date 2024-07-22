@@ -6,6 +6,7 @@ use App\Http\Controllers\frontend\CartController;
 use App\Http\Controllers\frontend\CategoryController;
 use App\Http\Controllers\frontend\CheckoutController;
 use App\Http\Controllers\frontend\HomepageController;
+use App\Http\Controllers\frontend\OrderController;
 use App\Http\Controllers\frontend\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\IsAdmin;
@@ -24,6 +25,8 @@ Route::delete('/cart/{id}', [CartController::class, 'destroy'])->name('cart.dest
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
 Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
 
+Route::get('/order/show', [OrderController::class, 'show'])->name('order.show');
+Route::delete('/orderItem/{id}', [OrderController::class, 'destroy'])->name('orderItem.destroy');
 
 
 Route::middleware('auth', IsAdmin::class, preventBackHistory::class)->prefix('admin')->group(function () {

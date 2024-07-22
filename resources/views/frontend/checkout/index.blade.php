@@ -17,34 +17,35 @@
                     <p class="w-full font-semibold text-lg pb-2">Delivery Address</p>
                     <div class="flex justify-between items-center space-x-2">
                         <input type="text" name="country"
-                            class="w-full outline-none border-none bg-violet-50 rounded-3xl shadow placeholder:text-black my-1"
-                            placeholder="Country">
-                        <input type="text" name="name"
-                            class="w-full outline-none border-none bg-violet-50 rounded-3xl shadow placeholder:text-black my-1"
+                            value="{{ $address != null ? $address->country : 'India' }}"
+                            class="w-full outline-none border-none bg-violet-100 rounded-3xl shadow placeholder:text-black my-1 focus:ring-1 focus:ring-violet-300"
+                            placeholder="Country" readonly>
+                        <input type="text" name="name" value="{{ $address != null ? $address->name : '' }}"
+                            class="w-full outline-none border-none bg-violet-50 rounded-3xl shadow placeholder:text-black my-1 focus:ring-1 focus:ring-violet-300"
                             placeholder="Name">
                     </div>
                     <div class="flex justify-between items-center space-x-2">
-                        <input type="text" name="address"
-                            class="w-full outline-none border-none bg-violet-50 rounded-3xl shadow placeholder:text-black my-1"
+                        <input type="text" name="address" value="{{ $address != null ? $address->address : '' }}"
+                            class="w-full outline-none border-none bg-violet-50 rounded-3xl shadow placeholder:text-black my-1 focus:ring-1 focus:ring-violet-300"
                             placeholder="Address">
-                        <input type="text" name="apartment"
-                            class="w-full outline-none border-none bg-violet-50 rounded-3xl shadow placeholder:text-black my-1"
+                        <input type="text" name="apartment" value="{{ $address != null ? $address->apartment : '' }}"
+                            class="w-full outline-none border-none bg-violet-50 rounded-3xl shadow placeholder:text-black my-1 focus:ring-1 focus:ring-violet-300"
                             placeholder="Apartment">
                     </div>
                     <div class="flex justify-between items-center space-x-2">
-                        <input type="text" name="city"
-                            class="w-full outline-none border-none bg-violet-50 rounded-3xl shadow placeholder:text-black my-1"
+                        <input type="text" name="city" value="{{ $address != null ? $address->city : '' }}"
+                            class="w-full outline-none border-none bg-violet-50 rounded-3xl shadow placeholder:text-black my-1 focus:ring-1 focus:ring-violet-300"
                             placeholder="City">
-                        <input type="text" name="state"
-                            class="w-full outline-none border-none bg-violet-50 rounded-3xl shadow placeholder:text-black my-1"
+                        <input type="text" name="state" value="{{ $address != null ? $address->state : '' }}"
+                            class="w-full outline-none border-none bg-violet-50 rounded-3xl shadow placeholder:text-black my-1 focus:ring-1 focus:ring-violet-300"
                             placeholder="State">
                     </div>
                     <div class="flex justify-between items-center space-x-2">
-                        <input type="text" name="pincode"
-                            class="w-full outline-none border-none bg-violet-50 rounded-3xl shadow placeholder:text-black my-1"
+                        <input type="text" name="pincode" value="{{ $address != null ? $address->pincode : '' }}"
+                            class="w-full outline-none border-none bg-violet-50 rounded-3xl shadow placeholder:text-black my-1 focus:ring-1 focus:ring-violet-300"
                             placeholder="Pincode">
-                        <input type="text" name="phone"
-                            class="w-full outline-none border-none bg-violet-50 rounded-3xl shadow placeholder:text-black my-1"
+                        <input type="text" name="phone" value="{{ $address != null ? $address->phone : '' }}"
+                            class="w-full outline-none border-none bg-violet-50 rounded-3xl shadow placeholder:text-black my-1 focus:ring-1 focus:ring-violet-300"
                             placeholder="Phone Number">
                     </div>
                 </div>
@@ -58,15 +59,15 @@
                     <p class="w-full font-semibold text-lg">Payment</p>
                     <div class="flex flex-col space-y-2 mx-2 py-1">
                         <div class="">
-                            <input type="radio" id="GPay" name="payment" value="GPay">
+                            <input type="radio" id="payment" name="payment" value="GPay" disabled>
                             <label class="cursor-pointer" for="GPay">GPay</label>
                         </div>
                         <div class="">
-                            <input type="radio" id="PayPal" name="payment" value="PayPal">
+                            <input type="radio" id="payment" name="payment" value="PayPal" disabled>
                             <label class="cursor-pointer" for="PayPal">PayPal</label>
                         </div>
                         <div class="">
-                            <input type="radio" id="CashOnDelivery" name="payment" value="CashOnDelivery">
+                            <input type="radio" id="payment" name="payment" value="CashOnDelivery" checked>
                             <label class="cursor-pointer" for="CashOnDelivery">Cash On Delivery</label>
                         </div>
                     </div>

@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
 
         User::factory(20)->create();
 
-        Address::factory(20)->create();
+        // Address::factory(20)->create();
         Category::factory(20)->create();
         SubCategory::factory(20)->create();
         Product::factory(200)->create();

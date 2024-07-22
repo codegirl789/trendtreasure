@@ -20,7 +20,6 @@ class AddressFactory extends Factory
         $user = User::all()->random();
         return [
             'user_id' => $user->id,
-            'title' => fake()->words(2, true),
             'address_line_1' => fake()->address(),
             'address_line_2' => fake()->address(),
             'country' => fake()->country(),
